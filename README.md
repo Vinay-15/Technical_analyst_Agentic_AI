@@ -1,7 +1,3 @@
-Nice project — this is actually solid agentic work. Below is a **clean, detailed, GitHub-ready README** you can drop straight into `README.md`. It explains *what it does, how it works, tools, setup, and usage* in a way reviewers and hackathon judges like.
-
----
-
 # 🧠 Agentic AI Research Assistant
 
 An **agent-based AI research assistant** built with **LangChain**, **Groq LLMs**, and **custom tools** to automatically research a topic, validate facts, analyze trends, generate citations, and optionally save results to a file — all through a single prompt-driven workflow.
@@ -20,13 +16,36 @@ An **agent-based AI research assistant** built with **LangChain**, **Groq LLMs**
 
 ---
 
+## Architecture Overview
+
+```
+
+User Prompt
+↓
+Agent (LangChain)
+↓
+Tool Selection & Reasoning Loop
+├── Wikipedia Search
+├── Fact Check
+├── Trend Analysis
+├── Citation Generation
+└── Save Output
+↓
+Structured JSON Response
+
+````
+
+---
+
 ## 🛠️ Tech Stack
 
-* **Python**
-* **LangChain (Agents & Tool Calling)**
-* **Groq LLMs** (`llama-3.3-70b-versatile`)
-* **Pydantic** (structured outputs)
-* **dotenv** (secure environment variables)
+| Layer | Technology |
+|----|----|
+| Language | Python |
+| LLM | Groq – `llama-3.3-70b-versatile` |
+| Agent Framework | LangChain |
+| Output Validation | Pydantic |
+| Secrets Management | dotenv |
 
 ---
 
@@ -168,133 +187,6 @@ Impact of AI on supply chain management
 
 Contributions, suggestions, and improvements are welcome!
 Feel free to fork the repo or open an issue.
-
----
-
-Perfect — here’s a **hackathon-optimized README upgrade** with **clean badges**, sharper framing, and judge-friendly language. You can **replace the top part of your README** with this, or paste it fully if you want a refresh.
-
----
-
-```md
-# 🧠 Agentic AI Research Assistant  
-### Autonomous, Tool-Calling AI for Verified Research & Analysis
-
-![Python](https://img.shields.io/badge/Python-3.9+-blue?logo=python)
-![LangChain](https://img.shields.io/badge/LangChain-Agents-green)
-![Groq](https://img.shields.io/badge/Groq-LLM-orange)
-![Status](https://img.shields.io/badge/Hackathon-Ready-purple)
-![License](https://img.shields.io/badge/License-MIT-lightgrey)
-
-An **agent-based AI research assistant** that autonomously gathers, verifies, analyzes, and structures information using **tool calling and reasoning loops**. Built for **hackathons, rapid prototyping, and real-world research workflows**.
-
----
-
-## 🏆 Why This Project (Hackathon Context)
-
-Research today is:
-- Fragmented across tools  
-- Vulnerable to hallucinations  
-- Time-consuming to verify  
-
-This project demonstrates how **Agentic AI** can:
-- Reason about *which tools to use*
-- Verify information before answering
-- Return **structured, production-ready outputs**
-- Operate with minimal human supervision  
-
-Perfect for **AI/ML, DevTools, Productivity, and Data tracks**.
-
----
-
-## 🚀 Key Capabilities
-
-- 🤖 **Autonomous Tool-Calling Agent**
-- 🔍 **Wikipedia-first knowledge validation**
-- ✅ **Fact-checking to reduce hallucinations**
-- 📈 **Trend & popularity analysis**
-- 📚 **Automatic citation generation**
-- 💾 **Save outputs to files**
-- 📦 **Strict JSON schema output (Pydantic)**
-
----
-
-## 🧠 Architecture Overview
-
-```
-
-User Prompt
-↓
-Agent (LangChain)
-↓
-Tool Selection & Reasoning Loop
-├── Wikipedia Search
-├── Fact Check
-├── Trend Analysis
-├── Citation Generation
-└── Save Output
-↓
-Structured JSON Response
-
-````
-
----
-
-## 🛠️ Tech Stack
-
-| Layer | Technology |
-|----|----|
-| Language | Python |
-| LLM | Groq – `llama-3.3-70b-versatile` |
-| Agent Framework | LangChain |
-| Output Validation | Pydantic |
-| Secrets Management | dotenv |
-
----
-
-## 🧩 Tools Implemented
-
-| Tool | Purpose |
-|----|----|
-| `wiki_tool` | Primary research source |
-| `fact_check` | Claim verification |
-| `analyze_trends` | Topic relevance & popularity |
-| `generate_citation` | Source citations |
-| `save_tool` | Persist research to file |
-
----
-
-## ⚙️ Setup & Run (Hackathon Fast Start)
-
-```bash
-git clone https://github.com/Vinay-15/Technical_analyst_Agentic_AI.git
-cd Technical_analyst_Agentic_AI
-pip install -r requirements.txt
-````
-
-Create `.env`:
-
-```env
-GROQ_API_KEY=your_api_key_here
-```
-
-Run:
-
-```bash
-python main.py
-```
-
----
-
-## 📤 Example Output
-
-```json
-{
-  "topic": "AI in Supply Chain Management",
-  "summary": "AI improves demand forecasting, inventory optimization...",
-  "sources": ["Wikipedia"],
-  "tools_used": ["wiki_tool", "fact_check", "analyze_trends"]
-}
-```
 
 ---
 
